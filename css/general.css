@@ -28,6 +28,8 @@
   --color-Primary5: #BEDDDE;
   --color-border: rgba(217, 217, 217, 0.523);
   --color-text: rgba(82, 82, 82, 1);
+
+  --color-gray2: rgba(115, 115, 115, 1);
 }
 
 li {
