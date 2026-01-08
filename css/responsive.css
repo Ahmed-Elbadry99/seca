@@ -5,16 +5,83 @@
 @media (max-width: 1300px) {}
 
 @media (max-width: 1200px) {
-  
+    .nav-bar .main-container{
+        width: 95%;
+    }
+    .nav-bar img{
+        width: 100px;
+        height: auto;
+    }
 }
 
 @media (max-width: 992px) {
    
+    .nav-bar .main-container{
+        width: 90%;
+    }
+
+    .nav-bar  .btn-nav-res > a,
+    .nav-bar .element{
+
+        display: none;
+    }
+    
+    .lang-btn,
+    .menu-div {
+        display: flex !important;
+    }
+
+
+    .video-bg .content{
+        width: 85%;
+        justify-content: start;
+        margin-top: 100px;
+    }
+
+
+    .video-bg .sec-header{
+        padding: 5px;
+    }
+.video-bg .sec-header h2 {
+        font-size: 12px;
+
+    }
+    .video-bg .content h1 {
+        font-size: 20px;
+    }
+
+
 }
 
 @media (max-width: 768px) {
 
+    section{
+        padding: 20px 0;
+    }
+
+    .about-us {
+
+    .about-us-img{
+        margin-left: auto;
+        margin-right: 0;
+    }
   
+    }
+
+
+    .our-numbers {
+
+        .content{
+
+
+            width: 95%;
+
+        }
+
+
+    }
+
+
 }
 
 @media (max-width: 576px) {
