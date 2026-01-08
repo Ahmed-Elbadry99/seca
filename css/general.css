@@ -19,7 +19,7 @@
 }
 :root {
   --color-white: #fff;
-  --color-black: #171717;
+  --color-black: #000;
   --color-black1: #2E2E2E;
   --color-black2: #333333;
   --color-Primary1: rgb(89, 193, 172);
@@ -580,7 +580,7 @@ textarea {
 
 
 .ctm-btn-none {
-  background-color: transparent;
+  background-color: transparent !important;
   color: var(--color-Primary1) !important;
   padding: 13px 0;
   display: flex;
