@@ -233,8 +233,8 @@ if ($(".counter").length) {
 
 
 
-// social-media-icons
 
+// social-media-icons
 
 const socialMediaIcons = document.querySelector(".social-media-icons");
 const openIcon = document.querySelector(".open-icon");
@@ -247,3 +247,6 @@ openIcon.addEventListener("click", () => {
 listIcons.addEventListener("click", () => {
   socialMediaIcons.classList.remove("active");
 });
+
+
+
