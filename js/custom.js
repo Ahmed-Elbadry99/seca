@@ -110,7 +110,9 @@ $winl.on("click.Bst", function (event) {
 
 
 const track = document.querySelector(".slider-track");
+if(track){
 const cards = Array.from(track.querySelectorAll(".card-article"));
+
 
 
 cards.forEach((card) => {
@@ -142,6 +144,7 @@ track.addEventListener("mouseleave", () => {
   gsap.to(sliderTween, { timeScale: 1, duration: 0.4 });
 });
 
+}
 
 
 

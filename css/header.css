@@ -5,6 +5,10 @@ header{
     flex-direction: column;
 }
 
+
+header.pages{
+    height: auto;
+}
 .top-bar {
     padding: 20px 0;
     height: 85px;
@@ -429,4 +433,49 @@ background-color: transparent;
           flex-direction: row-reverse; */
         transition-timing-function: linear !important;
       }
+  }
+
+
+
+
+  .sub-header{
+    background-color: var(--color-Primary2);
+    padding: 40px 0;
+    position: relative;
+    overflow: hidden;
+    
+    .main-container{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    h2{
+        font-size: 24px;
+        font-family: 'font_bold';
+        color: var(--color-white);
+    }
+    .path{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+
+        a{
+            color: var(--color-white);
+            font-size: 14px;
+            font-family: 'font_bold';
+        }
+    }
+
+    .sub-bg{
+
+        position: absolute;
+        bottom: 40%;
+        left: 0;
+        width: 280px;
+        height: 100%;
+        z-index: 0;
+        
+
+    }
   }
