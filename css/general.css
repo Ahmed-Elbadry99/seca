@@ -115,9 +115,9 @@ h4 {
 }
 
 p {
-  font-size: 15px;
+  font-size: clamp(10px, 5vw, 15px);
   margin: 0;
-  line-height: 1.5;
+  line-height: 1.7;
   color: var(--color-gray);
 }
 
@@ -531,7 +531,7 @@ textarea {
   background-color: var(--color-Primary1);
   text-align: center;
   min-width: 120px;
-  font-size: 13px;
+  font-size: clamp(10px, 5vw, 13px);
   border-radius: 5px;
   border: none;
   /* display: inline-block; */
@@ -1128,12 +1128,37 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  
 }
 
 .ctm-btn:hover {
-  background-color: var(--color-Primary2);
+  background-color: var(--color-Primary1);
   color: var(--color-white);
   transition: all .3s linear;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px var(--color-Primary1);
+}
+
+.ctm-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.ctm-btn:hover::before {
+  width: 300px;
+  height: 300px;
 }
 
 .ctm-btn img {

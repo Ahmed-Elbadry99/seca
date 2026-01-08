@@ -144,3 +144,106 @@ track.addEventListener("mouseleave", () => {
 
 
 
+
+
+
+// statistics numbers
+
+
+
+
+
+
+
+if ($(".counter").length) {
+  var a = 0;
+  $(window).scroll(function () {
+    var oTop = $(".counter-box").offset().top - window.innerHeight;
+    if (a == 0 && $(window).scrollTop() > oTop) {
+      $(".counter").each(function () {
+        var $this = $(this),
+          countTo = $this.attr("data-number");
+        $({
+          countNum: $this.text(),
+        }).animate(
+          {
+            countNum: countTo,
+          },
+
+          {
+            duration: 2550,
+            easing: "swing",
+            step: function () {
+              //$this.text(Math.ceil(this.countNum));
+              $this.text(Math.ceil(this.countNum).toLocaleString("en"));
+            },
+            complete: function () {
+              $this.text(Math.ceil(this.countNum).toLocaleString("en"));
+              //alert('finished');
+            },
+          }
+        );
+      });
+      a = 1;
+    }
+  });
+
+  const animationDuration = 4000;
+
+  const frameDuration = 1000 / 60;
+
+  const totalFrames = Math.round(animationDuration / frameDuration);
+
+  const easeOutQuad = (t) => t * (2 - t);
+
+  const animateCountUp = (el) => {
+    let frame = 0;
+    const countTo = parseInt(el.innerHTML, 10);
+
+    const counter = setInterval(() => {
+      frame++;
+
+      const progress = easeOutQuad(frame / totalFrames);
+
+      const currentCount = Math.round(countTo * progress);
+
+      if (parseInt(el.innerHTML, 10) !== currentCount) {
+        el.innerHTML = currentCount;
+      }
+
+      if (frame === totalFrames) {
+        clearInterval(counter);
+      }
+    }, frameDuration);
+  };
+
+  const countupEls = document.querySelectorAll(".timer");
+  countupEls.forEach(animateCountUp);
+
+  $(".animated-progress span").each(function () {
+    $(this).animate(
+      {
+        width: $(this).attr("data-progress") + "%",
+      },
+      2100
+    );
+    $(this).text($(this).attr("data-progress") + "%");
+  });
+}
+
+
+
+// social-media-icons
+
+
+const socialMediaIcons = document.querySelector(".social-media-icons");
+const openIcon = document.querySelector(".open-icon");
+const listIcons = document.querySelector(".list-icons");
+
+openIcon.addEventListener("click", () => {
+  socialMediaIcons.classList.toggle("active");
+});
+
+listIcons.addEventListener("click", () => {
+  socialMediaIcons.classList.remove("active");
+});
