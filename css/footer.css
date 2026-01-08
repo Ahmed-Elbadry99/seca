@@ -99,32 +99,6 @@
 }
 
 
-/* ================= Responsive ================= */
-@media (max-width: 768px) {
-  .footer-content {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .footer-left {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .end-page {
-    text-align: center;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    gap: 15px;
-  }
-
-}
-
-
-
-
 .remove-mune {
   position: absolute;
   top: 30px;

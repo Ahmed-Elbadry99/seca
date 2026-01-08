@@ -5,73 +5,104 @@
 @media (max-width: 1300px) {}
 
 @media (max-width: 1200px) {
-    .nav-bar .main-container{
+    .nav-bar .main-container {
         width: 95%;
     }
-    .nav-bar img{
+
+    .nav-bar img {
         width: 100px;
         height: auto;
+    }
+
+    /* card article */
+    .card-article {
+        flex: 0 0 calc(100% / 3);
+    }
+
+    /* card article */
+}
+
+@media (max-width:1024px) {
+    .heading-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }
 
 @media (max-width: 992px) {
-   
-    .nav-bar .main-container{
+
+    .nav-bar .main-container {
         width: 90%;
     }
 
-    .nav-bar  .btn-nav-res > a,
-    .nav-bar .element{
+    .nav-bar .btn-nav-res>a,
+    .nav-bar .element {
 
         display: none;
     }
-    
+
     .lang-btn,
     .menu-div {
         display: flex !important;
     }
 
 
-    .video-bg .content{
+    .video-bg .content {
         width: 85%;
         justify-content: start;
         margin-top: 100px;
     }
 
 
-    .video-bg .sec-header{
+    .video-bg .sec-header {
         padding: 5px;
     }
-.video-bg .sec-header h2 {
+
+    .video-bg .sec-header h2 {
         font-size: 12px;
 
     }
+
     .video-bg .content h1 {
         font-size: 20px;
     }
 
 
+    .articles-slider .slider-track .card-article {
+        flex: 0 0 calc(100% / 2);
+    }
+
+    .contact-info {
+        flex-direction: row;
+        align-items: start;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .contact-form {
+        padding: 30px;
+    }
 }
 
 @media (max-width: 768px) {
 
-    section{
+    section {
         padding: 20px 0;
     }
 
     .about-us {
 
-    .about-us-img{
-        margin-left: auto;
-        margin-right: 0;
-    }
-  
+        .about-us-img {
+            margin-left: auto;
+            margin-right: 0;
+        }
+
     }
 
 
     .our-numbers {
 
-        .content{
+        .content {
 
 
             width: 95%;
@@ -81,16 +112,34 @@
 
     }
 
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-left {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .end-page {
+        text-align: center;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+    }
+
 
 }
 
 @media (max-width: 576px) {
- 
+    .articles-slider .slider-track .card-article {
+        flex: 0 0 100%;
+    }
 }
 
 
 
-@media (max-width: 450px) {
-   
-
-}
+@media (max-width: 450px) {}
