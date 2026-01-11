@@ -109,6 +109,7 @@ $winl.on("click.Bst", function (event) {
 });
 
 
+// slider اخر الاخبار
 const track = document.querySelector(".slider-track");
 if(track){
 const cards = Array.from(track.querySelectorAll(".card-article"));
@@ -146,6 +147,7 @@ track.addEventListener("mouseleave", () => {
 
 }
 
+// slider اخر الاخبار end
 
 
 
@@ -250,6 +252,4 @@ openIcon.addEventListener("click", () => {
 listIcons.addEventListener("click", () => {
   socialMediaIcons.classList.remove("active");
 });
-
-
 

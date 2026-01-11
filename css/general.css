@@ -607,7 +607,7 @@ textarea {
 }
 :root {
   --color-white: #fff;
-  --color-black: #2E2E2E;
+  --color-black: #000;
   --color-black2: #333333;
   --color-Primary1: rgba(89, 193, 172, 1);
   --color-Primary2: rgba(38, 60, 144, 1);
