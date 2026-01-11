@@ -253,3 +253,18 @@ listIcons.addEventListener("click", () => {
   socialMediaIcons.classList.remove("active");
 });
 
+
+
+// faq
+const items = document.querySelectorAll(".faq-item");
+
+items.forEach(item => {
+  const question = item.querySelector(".faq-question");
+
+  question.addEventListener("click", () => {
+      items.forEach(i => i.classList.remove("active"));
+      item.classList.toggle("active");
+  });
+});
+
+// faq end
