@@ -3,6 +3,16 @@
 @media (max-width: 1395px) {}
 
 @media (max-width: 1300px) {}
+@media (max-height: 630px) {
+
+    /* .video-bg .content{
+        justify-content: ;
+        margin-top: 110px;
+    } */
+    .video-bg .content h1{
+        font-size: 30px;
+    }
+}
 
 @media (max-width: 1200px) {
     .nav-bar .main-container {
@@ -26,6 +36,12 @@
     .heading-wrapper {
         flex-direction: column;
         align-items: flex-start;
+    }
+    .heading-wrapper .ctm-btn{
+       display: none;
+    }
+    .ctm-btn-wrapper{
+        display: flex;
     }
 }
 
@@ -55,8 +71,7 @@
 
     .video-bg .content {
         width: 85%;
-        justify-content: start;
-        margin-top: 100px;
+        justify-content: center;
     }
 
 
