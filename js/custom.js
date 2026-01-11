@@ -253,3 +253,55 @@ listIcons.addEventListener("click", () => {
 
 
 
+
+
+
+
+// membership subscription
+
+
+  const fileUpload = document.querySelector(".file-upload");
+  const imgUpload = document.querySelector(".img-upload");
+  fileUpload.addEventListener("change", (e) => {
+    const file = e.target.files[0];
+    if(file){
+      // Check if file is PDF
+      if(file.type === "application/pdf"){
+        // Hide the image and display the PDF filename
+        imgUpload.style.display = "none";
+        
+        // Check if filename element already exists, if not create it
+        let filenameElement = imgUpload.parentElement.querySelector(".pdf-filename");
+        if(!filenameElement){
+          filenameElement = document.createElement("p");
+          filenameElement.className = "pdf-filename";
+          imgUpload.parentElement.insertBefore(filenameElement, imgUpload);
+        }
+        filenameElement.textContent = file.name;
+        filenameElement.style.display = "block";
+      } else {
+        // Show image preview for image files
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          const image = new Image();
+          image.src = e.target.result;
+          console.log(image);
+          imgUpload.src = image.src;
+          imgUpload.style.display = "block";
+          
+          // Hide filename element if it exists
+          const filenameElement = imgUpload.parentElement.querySelector(".pdf-filename");
+          if(filenameElement){
+            filenameElement.style.display = "none";
+          }
+        }
+        reader.readAsDataURL(file);
+      }
+    }
+  });
+
+
+
+
+
+

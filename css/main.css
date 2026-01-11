@@ -438,7 +438,7 @@ section {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    z-index: 99999;
+    z-index: 999;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -642,6 +642,9 @@ section {
 
 /* our goals */
 .our-goals {
+
+    padding: 40px 0 100px 0;
+
     .our-goals-item {
         display: flex;
         flex-direction: column;
@@ -1171,29 +1174,33 @@ section {
     align-items: center;
     flex-direction: column;
     gap: 40px;
-    padding: 20px ;
+    padding: 20px;
 }
-.about-seca .family .family-container .text-content{
+
+.about-seca .family .family-container .text-content {
     display: flex;
     flex-direction: column;
     gap: 10px;
     align-items: center;
     justify-content: center;
 }
-.about-seca .family .family-container .text-content h2{
-    font-size: clamp(10px, 2vw, 16px);
+
+.about-seca .family .family-container .text-content h2 {
+    font-size: clamp(14px, 2vw, 18px);
     font-weight: 600;
     line-height: 20px;
     color: var(--color-Primary2);
     font-family: 'font_bold';
 }
-.about-seca .family .family-container .text-content p{
+
+.about-seca .family .family-container .text-content p {
     font-size: clamp(8px, 2vw, 14px);
     color: var(--color-Primary1);
     margin-top: 8px;
     font-weight: 600;
     line-height: 30px;
 }
+
 .about-seca .items {
 
     display: flex;
@@ -1254,7 +1261,7 @@ section {
 
 }
 
-.family .items{
+.family .items {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -1270,10 +1277,10 @@ section {
 /* managers */
 
 
-.manager-item{
+.manager-item {
     display: flex;
     gap: 20px;
-    align-items: center;
+    align-items: stretch;
     justify-content: space-between;
     text-align: center;
     gap: 10px;
@@ -1283,7 +1290,7 @@ section {
     box-shadow: 0 25px 7px 0 rgba(72, 190, 160, 0),
 }
 
-.manager-item .img-container{
+.manager-item .img-container {
     width: 70px;
     height: 70px;
     border-radius: 8px;
@@ -1291,7 +1298,7 @@ section {
 }
 
 
-.manager-item .img-container img{
+.manager-item .img-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -1301,35 +1308,421 @@ section {
 
 
 
-.manager-item .text-content{
+.manager-item .text-content {
     display: flex;
     align-items: stretch;
     justify-content: space-between;
     flex: 1;
-    height: 100%;
 
 }
 
 
-.manager-item .text-content .text-item{
+.manager-item .text-content .text-item {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     gap: 15px;
-    height: 100%;
-    flex: 1;
-    flex-grow: 1;
+
 }
 
 
 
-.manager-item .text-content .text-item:nth-child(1){
+.manager-item .text-content .text-item:nth-child(1) {
     align-items: start;
-    justify-content: start;
+    justify-content: space-between;
 }
 
 
-.manager-item .text-content .text-item{
+.manager-item .text-content .text-item {
     height: 100%;
+}
+
+
+
+.manager-item .text-content .text-item h2 {
+    color: var(--color-Primary1);
+    font-family: "font_bold";
+}
+
+.manager-item .text-content .text-item img {
+
+    width: 30px;
+    height: 30px;
+    background-color: rgba(72, 190, 160, 0.15);
+    border-radius: 4px;
+    padding: 4px;
+}
+
+
+
+
+/* members */
+
+.members-content {
+    padding: 40px 0 100px 0;
+}
+
+.members-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    background-color: var(--color-white);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 25px 7px 0 rgba(0, 0, 0, 0),
+        0 16px 6px 0 rgba(0, 0, 0, 0.01),
+        0 9px 5px 0 rgba(0, 0, 0, 0.05),
+        0 4px 4px 0 rgba(0, 0, 0, 0.09),
+        0 1px 10px 0 rgba(0, 0, 0, .1);
+    transition: all 0.3s ease;
+        position: relative;
+}
+
+
+
+.members-item h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-Primary1);
+    font-family: 'font_bold';
+    transition: all 0.3s ease;
+}
+
+.members-item .member-features {
+    font-size: 14px;
+    color: var(--color-Primary1);
+    font-weight: 600;
+    background-color: rgba(72, 190, 160, 0.15);
+    font-family: 'font_bold';
+    padding: 8px;
+    border-radius: 8px;
+  cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.members-item p {
+    font-size: 14px;
+    color: var(--color-black);
+    font-weight: 600;
+    font-family: 'font_bold';
+    font-size:34px;
+    margin-top: 20px;
+    position: relative;
+
+    & svg{
+        position: absolute;
+        top: -10px;
+        left: -30PX;
+    }
+    transition: all 0.3s ease;
+}
+
+
+.members-item .ctm-btn {
+
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 25px 7px 0 rgba(0, 0, 0, 0),
+    0 16px 6px 0 rgba(0, 0, 0, 0.01),
+    0 9px 5px 0 rgba(0, 0, 0, 0.05),
+    0 4px 4px 0 rgba(0, 0, 0, 0.09),
+    0 1px 10px 0 rgba(0, 0, 0, .1);
+    transition: all 0.3s ease;
+}
+
+
+
+
+.members-item:hover {
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    background: linear-gradient(276.53deg, #1A428A 0%, #48BEA0 100%);
+}
+
+
+.members-item:hover h2,
+.members-item:hover .member-features,
+.members-item:hover p,
+.members-item:hover svg path {
+    color: var(--color-white);
+    fill: var(--color-white);
+}
+
+.members-item:hover .member-features{
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.members-item:hover .ctm-btn{
+    background: var(--color-white);
+    color: var(--color-Primary1) !important;
+}
+
+.members-item:hover .ctm-btn:hover{
+    background: var(--color-Primary1);
+    color: var(--color-white) !important;
+}
+
+
+
+#featuresModal li{
+    display: list-item;
+    list-style: disc;
+    margin-right: 35px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+#featuresModal .modal-header{
+    text-align: center;
+    border-bottom: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#featuresModal .modal-header h1{
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-Primary1);
+    font-family: 'font_bold';
+}
+
+#featuresModal .modal-header button{
+    position: absolute;
+    top: -40px;
+    right: 0;
+    font-size: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#featuresModal .modal-body {
+    padding: 25px ;
+}
+
+
+/* membership subscription */
+
+.membership-subscription-content{
+    position: relative;
+}
+.membership-subscription-content::after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-image: url('../images/form-bg.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.membership-subscription-content  form{
+
+    position: relative;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 40px 20px;
+    border-radius: 16px;
+    box-shadow: 0 25px 7px 0 rgba(0, 0, 0, 0),
+        0 16px 6px 0 rgba(0, 0, 0, 0.01),
+        0 9px 5px 0 rgba(0, 0, 0, 0.05),
+        0 4px 4px 0 rgba(0, 0, 0, 0.09),
+        0 1px 10px 0 rgba(0, 0, 0, .1);
+        background-color: #fff;
+}
+
+.membership-subscription-content  form .form-group{
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.membership-subscription-content  form .form-select{
+
+    background-position: left .75rem center;
+    padding: .375rem .75rem .375rem  2.25rem;
+    height: 50px;
+}
+
+
+.membership-subscription-content  form h2{
+    font-size:clamp(14px, 5vw, 24px);
+    font-weight: 600;
+    color: var(--color-Primary1);
+    font-family: 'font_bold';
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+
+.upload-file{
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-Primary4);
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding:40px 20px;
+    border-radius: 16px;
+    
+    border: 1px dashed var(--color-Primary1);
+
+    input{
+        display: none;
+    }
+    span{
+        color: var(--color-gray2);
+    }
+
+
+    label {
+        font-size: 16px;
+        font-weight: 600;
+        font-family: 'font_bold';
+        cursor: pointer;
+    }
+
+    label span{
+        color: var(--color-Primary1);
+        font-weight: 600;
+        font-family: 'font_bold';
+        cursor: pointer;
+    }
+
+
+    .img-upload{
+        max-width: 100px;
+        max-height: 100px;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+
+}
+
+
+/* association members */
+
+.association-members-list{
+    width: 100%;
+}
+.association-members-content h2{
+
+    font-size:clamp(12px, 3vw, 16px);
+    font-weight: 600;
+    color: var(--color-Primary1);
+    font-family: 'font_bold';
+    margin: 40px 0;
+    background-color: var(--color-Primary4);
+    padding:  15px;
+    width: 100%;
+}
+
+.association-members-list{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.association-members-item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+.association-members-item .img-container {
+    width: 200px;
+    height: 250px;
+    background-color: var(--color-Primary2);
+    border-radius: 102px 102px 102px 8px;
+    align-content: end;
+    overflow: hidden;
+    border: 1.5px solid var(--color-Primary2);
+}
+
+
+.association-members-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.association-members-item h3{
+
+    font-size: clamp(12px, 3vw, 18px);
+    font-weight: 600;
+    color: var(--color-Primary1);
+    font-family: 'font_bold';
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.association-members-item p{
+    font-size: clamp(10px, 2vw, 14px);
+    font-weight: 600;
+    color: var(--color-Primary2);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+
+/* basic regulations */
+
+.basic-regulations-item{
+
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 16px;
+    padding: 35px;
+    box-shadow: 0 25px 7px 0 rgba(0, 0, 0, 0),
+        0 16px 6px 0 rgba(0, 0, 0, 0.01),
+        0 9px 5px 0 rgba(0, 0, 0, 0.05),
+        0 4px 4px 0 rgba(0, 0, 0, 0.09),
+        0 1px 10px 0 rgba(0, 0, 0, .1);
+    background-color: var(--color-white);
+}
+
+.basic-regulations-item img{
+
+
+    max-width: 150px;
+    max-height: 110px;
 }

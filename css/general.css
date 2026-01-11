@@ -364,16 +364,18 @@ body::-webkit-scrollbar {
   object-fit: contain;
 }
 .form-control {
-  height: 60px;
-  border-radius: 35px;
+  height: 50px;
+  border-radius: 8px;
 
   padding-right: 20px;
   padding-left: 35px;
-  background-color: #f5f5f5;
+  background-color: #ffffff;
+  font-size: 16px;
 }
 
 .form-control::placeholder {
   color: var(--color-gray);
+  font-size: 14px;
 }
 
 .form-control:focus {
@@ -383,7 +385,6 @@ body::-webkit-scrollbar {
 }
 
 select {
-  font-family: "font_medium" !important;
   -webkit-appearance: none;
   appearance: none;
   color: var(--color-black) !important;
@@ -392,7 +393,7 @@ select {
 textarea {
   height: 170px !important;
   resize: none;
-  background-color: #f5f5f5;
+  background-color: #ffffff;
   border: 1px solid #f5f5f5;
 }
 
@@ -949,14 +950,7 @@ body::-webkit-scrollbar {
   left: 10px;
   object-fit: contain;
 }
-.form-control {
-  height: 60px;
-  border-radius: 35px;
 
-  padding-right: 20px;
-  padding-left: 35px;
-  background-color: #f5f5f5;
-}
 
 .form-control::placeholder {
   color: var(--color-gray);
@@ -969,7 +963,6 @@ body::-webkit-scrollbar {
 }
 
 select {
-  font-family: "font_medium" !important;
   -webkit-appearance: none;
   appearance: none;
   color: var(--color-black) !important;
@@ -978,7 +971,7 @@ select {
 textarea {
   height: 170px !important;
   resize: none;
-  background-color: #f5f5f5;
+  background-color: #ffffff;
   border: 1px solid #f5f5f5;
 }
 
@@ -1169,3 +1162,12 @@ textarea {
   object-fit: contain;
 }
 
+
+
+
+/* body_page */
+
+
+.body_page{
+  min-height: 100vh;
+}
