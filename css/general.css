@@ -14,8 +14,8 @@
 }
 
 @font-face {
-  font-family: "semiBold";
-  src: url("../fonts/Changa-SemiBold.ttf");
+  font-family: "English";
+  src: url("../fonts/Nexa-Trial-Regular.otf");
 }
 :root {
   --color-white: #fff;
@@ -99,6 +99,7 @@ h2 {
   font-size: 18px;
   line-height: 30px;
   margin: 0;
+  font-family: "font_bold";
 }
 
 h3 {

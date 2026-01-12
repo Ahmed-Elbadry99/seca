@@ -47,6 +47,8 @@ $("#times-ican").click(function () {
     close();
   } else {
     open();
+
+    console.log("open");
   }
 });
 
@@ -62,7 +64,7 @@ $(".remove-mune").click(function () {
 });
 
 
-$("#menu-div a").on("click", function (e) {
+$(".menu-div a").on("click", function (e) {
   e.preventDefault();
 });
 
@@ -313,6 +315,6 @@ listIcons.addEventListener("click", () => {
 
 $(".element_menu_responsive .drop-menu").click(function () {
  
-  $(".drop-element-responsive").toggleClass("active");
+  $(this).find(".drop-element-responsive").toggleClass("active");
 });
 

@@ -275,6 +275,7 @@ header.pages{
     align-items: center;
 }
 
+.drop-element ul li.active a,
 .drop-element ul li a:hover {
     color: var(--color-white);
     background-color: var(--color-Primary1);

@@ -72,7 +72,7 @@
           transition: all 0.5s ease-in-out;
         }
 
-        &:hover {
+        a:hover  {
           text-decoration: underline !important;
         }
       }
@@ -122,17 +122,35 @@
     transition: all 0.3s ease;
     position: absolute;
     top: 100%;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     background-color: var(--color-white);
     border-radius: 10px;
     padding: 10px;
     z-index: 1000;    
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+
+.menu_responsive  .drop-menu:hover a{
+  color: var(--color-Primary1) !important;
 
 }
+
+
 
 .drop-element-responsive.active {
   opacity: 1;
   visibility: visible;
+  width: 90%;
+ 
+}
+
+.drop-element-responsive ul li {
+  padding-bottom: 5px;
+}
+.drop-element-responsive ul li:hover{
+  color: var(--color-Primary2) !important;
 }
 
 .remove-mune {
@@ -189,7 +207,7 @@
   transform: rotate(45deg);
 }
 
-.element_menu_responsive ul li {
+.element_menu_responsive ul li > a  {
   transform: translateY(100%);
   transition: all 0.2s linear;
   transition-delay: 0.4s;
@@ -205,76 +223,76 @@
   transition-delay: 0.3s;
 }
 
-.menu_responsive.active .element_menu_responsive ul li {
+.menu_responsive.active .element_menu_responsive ul li > a  {
   transform: translateY(0%);
 }
 
-.menu_responsive.active .element_menu_responsive ul li:nth-of-type(1) {
+.menu_responsive.active .element_menu_responsive ul li:nth-of-type(1) > a  {
   transition-delay: 0.4s;
   opacity: 1;
 }
 
-.menu_responsive.active .element_menu_responsive ul li:nth-of-type(2) {
+.menu_responsive.active .element_menu_responsive ul li:nth-of-type(2) > a  {
   transition-delay: 0.6s;
   opacity: 1;
 }
 
-.menu_responsive.active .element_menu_responsive ul li:nth-of-type(3) {
+.menu_responsive.active .element_menu_responsive ul li:nth-of-type(3) > a  {
   transition-delay: 0.8s;
   opacity: 1;
 }
 
-.menu_responsive.active .element_menu_responsive ul li:nth-of-type(4) {
+.menu_responsive.active .element_menu_responsive ul li:nth-of-type(4) > a  {
   transition-delay: 1s;
   opacity: 1;
 }
 
-.menu_responsive.active .element_menu_responsive ul li:nth-of-type(5) {
+.menu_responsive.active .element_menu_responsive ul li:nth-of-type(5) > a  {
   transition-delay: 1.2s;
   opacity: 1;
 }
 
-.menu_responsive.active .element_menu_responsive ul li:nth-of-type(6) {
+.menu_responsive.active .element_menu_responsive ul li:nth-of-type(6) > a  {
   transition-delay: 1.4s;
   opacity: 1;
 }
 
-.menu_responsive.active .element_menu_responsive ul li:nth-of-type(7) {
+.menu_responsive.active .element_menu_responsive ul li:nth-of-type(7) > a  {
   transition-delay: 1.6s;
   opacity: 1;
 }
 
-.menu_responsive.active .element_menu_responsive ul li:nth-of-type(8) {
+.menu_responsive.active .element_menu_responsive ul li:nth-of-type(8) > a  {
   transition-delay: 1.8s;
   opacity: 1;
 }
 
-.menu_responsive.active .element_menu_responsive ul li:nth-of-type(9) {
+.menu_responsive.active .element_menu_responsive ul li:nth-of-type(9) > a  {
   transition-delay: 2s;
   opacity: 1;
 }
 
-.menu_responsive.active .element_menu_responsive ul li:nth-of-type(10) {
+.menu_responsive.active .element_menu_responsive ul li:nth-of-type(10) > a  {
   transition-delay: 2.2s;
   opacity: 1;
 }
 
-.menu_responsive.active .element_menu_responsive ul li:nth-of-type(11) {
+.menu_responsive.active .element_menu_responsive ul li:nth-of-type(11) > a  {
   transition-delay: 2.4s;
   opacity: 1;
 }
 
-.menu_responsive.active .element_menu_responsive ul li:nth-of-type(12) {
+.menu_responsive.active .element_menu_responsive ul li:nth-of-type(12) > a  {
   transition-delay: 2.6s;
   opacity: 1;
 }
 
-.menu_responsive.active .element_menu_responsive ul li:nth-of-type(13) {
+.menu_responsive.active .element_menu_responsive ul li:nth-of-type(13) > a  {
   transition-delay: 2.8s;
   opacity: 1;
 }
 
-.menu_responsive.active .element_menu_responsive ul li:nth-of-type(14) {
+.menu_responsive.active .element_menu_responsive ul li:nth-of-type(14) > a  {
   transition-delay: 3s;
   opacity: 1;
 }

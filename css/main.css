@@ -1052,13 +1052,17 @@ section {
 
             &:hover {
                 background: var(--color-Primary1) !important;
-                padding: 10px;
+                padding: 0 0 10px 0;
             }
 
             &:hover .card-content .meta,
             &:hover .card-content .slide-title,
             &:hover .card-content .ctm-btn-none {
                 color: var(--color-white) !important;
+            }
+
+            &:hover  .meta img {
+                filter: brightness(0) invert(1);
             }
 
             .slider-img {
@@ -1916,4 +1920,10 @@ section {
 .ctm-btn-wrapper .ctm-btn{
     width: 100%;
     max-width: 200px;
+}
+
+/* english text */
+
+.english-text{
+    font-family: "English" !important;
 }
