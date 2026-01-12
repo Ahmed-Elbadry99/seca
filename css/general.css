@@ -303,7 +303,6 @@ body::-webkit-scrollbar {
 .element_menu_responsive > ul > li {
   display: block;
   margin: 35px 0;
-  position: relative;
 }
 
 .element_menu_responsive > ul > li > a {
@@ -890,7 +889,6 @@ body::-webkit-scrollbar {
 .element_menu_responsive > ul > li {
   display: block;
   margin: 35px 0;
-  position: relative;
 }
 
 .element_menu_responsive > ul > li > a {
@@ -905,6 +903,7 @@ body::-webkit-scrollbar {
 .element_menu_responsive ul li:hover a {
   color: var(--color-main);
 }
+
 
 .menu_responsive.active {
   transform: translateX(0);

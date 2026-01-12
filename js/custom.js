@@ -61,10 +61,10 @@ $(".remove-mune").click(function () {
   $(".navicon").removeClass("is-active");
 });
 
-$("#menu-div a").click(function () {
+
+$("#menu-div a").on("click", function (e) {
   e.preventDefault();
 });
-
 
 
 
@@ -264,6 +264,9 @@ listIcons.addEventListener("click", () => {
 
   const fileUpload = document.querySelector(".file-upload");
   const imgUpload = document.querySelector(".img-upload");
+
+
+  if(fileUpload){
   fileUpload.addEventListener("change", (e) => {
     const file = e.target.files[0];
     if(file){
@@ -302,8 +305,14 @@ listIcons.addEventListener("click", () => {
     }
   });
 
+}
 
 
+// responsive menu
 
 
+$(".element_menu_responsive .drop-menu").click(function () {
+ 
+  $(".drop-element-responsive").toggleClass("active");
+});
 

@@ -113,6 +113,28 @@
 }
 
 
+.menu_responsive  .drop-menu{
+  position: relative;
+}
+.drop-element-responsive {
+  opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--color-white);
+    border-radius: 10px;
+    padding: 10px;
+    z-index: 1000;    
+
+}
+
+.drop-element-responsive.active {
+  opacity: 1;
+  visibility: visible;
+}
+
 .remove-mune {
   position: absolute;
   top: 30px;
