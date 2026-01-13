@@ -237,7 +237,7 @@ section {
 
     .fast-action-item .content .arrow-line::before {
         content: "\f104";
-        font-family: "Font Awesome 6 Free";
+        font-family: "Font Awesome 7 Free";
         font-weight: 900;
         font-size: 10px;
         color: var(--color-black);
