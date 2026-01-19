@@ -247,13 +247,16 @@ const socialMediaIcons = document.querySelector(".social-media-icons");
 const openIcon = document.querySelector(".open-icon");
 const listIcons = document.querySelector(".list-icons");
 
-openIcon.addEventListener("click", () => {
-  socialMediaIcons.classList.toggle("active");
-});
 
-listIcons.addEventListener("click", () => {
-  socialMediaIcons.classList.remove("active");
-});
+if(socialMediaIcons){
+  openIcon.addEventListener("click", () => {
+    socialMediaIcons.classList.toggle("active");
+  });
+
+  listIcons.addEventListener("click", () => {
+    socialMediaIcons.classList.remove("active");
+  });
+}
 
 
 
@@ -318,3 +321,78 @@ $(".element_menu_responsive .drop-menu").click(function () {
   $(this).find(".drop-element-responsive").toggleClass("active");
 });
 
+
+
+
+
+// login box
+
+const passwordInputs = document.querySelectorAll(".password-input");
+
+passwordInputs.forEach(input => {
+  const wrapper = input.closest(".pass-edit"); // الديف اللي فيه الأيقونة
+  const eyeIcon = wrapper.querySelector(".fa-eye, .fa-eye-slash");
+
+  eyeIcon.addEventListener("click", () => {
+    if (input.type === "password") {
+      input.type = "text";
+      eyeIcon.classList.remove("fa-eye");
+      eyeIcon.classList.add("fa-eye-slash");
+    } else {
+      input.type = "password";
+      eyeIcon.classList.remove("fa-eye-slash");
+      eyeIcon.classList.add("fa-eye");
+    }
+  });
+});
+
+
+
+// switch button
+
+// const switchBtn = document.querySelectorAll(".switch-btn");
+// const formSwitch = document.querySelector(".form-switch");
+
+// if(switchBtn){
+//   switchBtn.forEach(btn => {
+//     btn.addEventListener("click", () => {
+//       formSwitch.classList.toggle("row-reverse");
+//     });
+//   }); 
+//   }
+
+
+const btn = document.getElementById("swapBtn");
+const boxA = document.querySelector(".boxA");
+const boxB = document.querySelector(".boxB");
+const row = document.querySelector(".form-switchs");
+
+let swapped = false;
+let direction = -1; // 1 = أول حركة (A من اليمين، B من اليسار)، -1 = العكس
+const screenWidth = window.innerWidth;
+
+btn.addEventListener("click", () => {
+
+  // حساب اتجاه الخروج لكل Box حسب direction
+  const boxAX = screenWidth * direction;     // A يتحرك للخارج
+  const boxBX = -screenWidth * direction;    // B يتحرك للخارج
+
+  // حركة الخروج
+  gsap.to(boxA, { x: boxAX, duration: 0.7, ease: "power3.in" });
+  gsap.to(boxB, { x: boxBX, duration: 0.7, ease: "power3.in",
+    onComplete: () => {
+      // بعد الخروج، نعمل reverse بصري
+      row.style.flexDirection = swapped ? "row" : "row-reverse";
+
+      // دخول الأعمدة مرة أخرى من الخارج
+      gsap.fromTo([boxA, boxB],
+        { x: (i) => i === 0 ? -boxAX : -boxBX },
+        { x: 0, duration: 0.7, ease: "power3.out" }
+      );
+    }
+  });
+
+  // تبديل الحالة للضغط التالي
+  swapped = !swapped;
+  direction *= -1; // قلب الاتجاه للضغطة القادمة
+});

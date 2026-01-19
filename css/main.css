@@ -1927,3 +1927,218 @@ section {
 .english-text{
     font-family: "English" !important;
 }
+
+
+
+
+/* auth form */
+.auth-form .row ,
+.auth-form {
+    min-height: 100vh; 
+}
+
+
+.auth-form .boxA {
+    background: linear-gradient(to bottom, var(--color-Primary1), var(--color-Primary2));
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.auth-form .boxA .hello-box-login,
+.auth-form .boxA .hello-box-register {
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center; 
+}
+
+
+.auth-form .boxA .hello-box-login h2,
+.auth-form .boxA .hello-box-register h2 {
+    font-size: clamp(16px, 3vw, 48px);
+    font-family: 'font_bold';
+    color: var(--color-white);
+    font-family: 'font_bold';
+    margin-bottom: 20px;
+}
+
+.auth-form .boxA .hello-box-login p,
+.auth-form .boxA .hello-box-register p {
+    font-size: clamp(10px, 5vw, 16px);
+    font-weight: 500;
+    color: var(--color-white);  
+    text-align: center;
+    line-height: 1.7;
+}   
+
+
+/* login box */
+.auth-form .boxB {
+
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.auth-form .boxB .login-box,
+.auth-form .boxB .register-box,
+.auth-form .boxB .login-box form,
+.auth-form .boxB .register-box form  {
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center; 
+    width: 100%;
+}
+
+.auth-form .boxB .login-box-content{
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.auth-form .boxB .login-box-content h2{
+
+    font-size: clamp(16px, 3vw, 48px);
+    color: var(--color-Primary1);
+}
+
+.auth-form .boxB .login-box-content p{
+    font-size: clamp(10px, 5vw, 16px);
+    color: var(--color-gray);
+}
+
+.auth-form .boxB .main-container{
+
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.auth-form .boxB .login-box,
+.auth-form .boxB .register-box{
+
+    width: 80%;
+}
+
+
+
+.auth-form .boxB .login-box form .form-group,
+.auth-form .boxB .register-box form .form-group {
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+
+.auth-form .boxB .login-box form .form-group input,
+.auth-form .boxB .register-box form .form-group input {
+    width: 100%;
+    height: 45px;
+    border-radius: 10px;
+    border: 1px solid var(--color-gray);
+    padding: 0 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-black);
+    background-color: var(--color-white);
+    outline: none;
+    transition: all 0.3s ease;
+    padding-right: 40px;
+}
+
+.auth-form .boxB .login-box form .form-group input:focus,
+.auth-form .boxB .register-box form .form-group input:focus {
+    border: 1px solid var(--color-Primary1);
+}
+
+.auth-form .boxB .login-box form .form-group input::placeholder,
+.auth-form .boxB .register-box form .form-group input::placeholder {
+
+    color: var(--color-gray);
+    font-size: 14px;
+}
+
+.auth-form .boxB .login-box form .form-group img,
+.auth-form .boxB .register-box form .form-group img,
+.auth-form .boxB .login-box form .form-group i,
+.auth-form .boxB .register-box form .form-group i {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+.auth-form .boxB .login-box form .form-group i,
+.auth-form .boxB .register-box form .form-group i{
+
+    color: var(--color-gray);
+    left: 10px;
+    right: unset;
+    cursor: pointer;
+}
+
+
+.auth-form .boxB .login-box a,
+.auth-form .boxB .register-box a{
+
+    font-size: 14px;
+    color: var(--color-Primary1);
+    font-weight: 500;
+    text-align: center;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.auth-form .boxB .login-box a:hover,
+.auth-form .boxB .register-box a:hover{
+    color: var(--color-Primary2);
+    transition: all 0.3s ease;
+    text-decoration: underline !important;
+}
+
+
+
+.auth-form .boxA .hello-box-register,
+.auth-form .boxB .register-box{
+    display: none;
+}
+
+
+
+.auth-form .row{
+
+    transition: all 0.3s ease;
+}
+.auth-form .row.row-reverse{
+    flex-direction: row-reverse;
+    transition: all 0.3s ease;
+}
+
+
+
+
+
