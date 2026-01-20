@@ -1947,33 +1947,10 @@ section {
     font-family: "English" !important;
 }
 
-
-/* member-subscripe */
-.member-subscrip-content form {
-    border: 1px solid #48BEA0;
-}
-
-.member-subscrip-content form .form-group label {
-    width: 100%;
-}
-
-.member-subscrip-content form .form-group textarea {
-    width: 100%;
-    min-height: 140px;
-    padding: 14px 16px;
-    border-radius: 8px;
-    border: 1px solid var(--color-border);
-    font-size: clamp(10px, 2vw, 14px);
-    resize: none;
-}
-
-.member-subscrip-content .upload-file1 {
-
-
 /* auth form */
-.auth-form .row ,
+.auth-form .row,
 .auth-form {
-    min-height: 100vh; 
+    min-height: 100vh;
 }
 
 
@@ -1995,7 +1972,7 @@ section {
     gap: 20px;
     align-items: center;
     justify-content: center;
-    text-align: center; 
+    text-align: center;
 }
 
 
@@ -2012,10 +1989,10 @@ section {
 .auth-form .boxA .hello-box-register p {
     font-size: clamp(10px, 5vw, 16px);
     font-weight: 500;
-    color: var(--color-white);  
+    color: var(--color-white);
     text-align: center;
     line-height: 1.7;
-}   
+}
 
 
 /* login box */
@@ -2032,18 +2009,18 @@ section {
 .auth-form .boxB .login-box,
 .auth-form .boxB .register-box,
 .auth-form .boxB .login-box form,
-.auth-form .boxB .register-box form  {
+.auth-form .boxB .register-box form {
 
     display: flex;
     flex-direction: column;
     gap: 20px;
     align-items: center;
     justify-content: center;
-    text-align: center; 
+    text-align: center;
     width: 100%;
 }
 
-.auth-form .boxB .login-box-content{
+.auth-form .boxB .login-box-content {
 
     display: flex;
     flex-direction: column;
@@ -2052,26 +2029,28 @@ section {
     justify-content: center;
     text-align: center;
 }
-.auth-form .boxB .login-box-content h2{
+
+.auth-form .boxB .login-box-content h2 {
 
     font-size: clamp(16px, 3vw, 48px);
     color: var(--color-Primary1);
 }
 
-.auth-form .boxB .login-box-content p{
+.auth-form .boxB .login-box-content p {
     font-size: clamp(10px, 5vw, 16px);
     color: var(--color-gray);
 }
 
-.auth-form .boxB .main-container{
+.auth-form .boxB .main-container {
 
-    display: flex;  
+    display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
+
 .auth-form .boxB .login-box,
-.auth-form .boxB .register-box{
+.auth-form .boxB .register-box {
 
     width: 80%;
 }
@@ -2082,6 +2061,44 @@ section {
 .auth-form .boxB .register-box form .form-group {
 
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, #1A428A 0%, #48BEA0 100%);
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 1px solid var(--color-Primary1);
+    cursor: pointer;
+    overflow: hidden;
+
+}
+
+
+/* member-subscripe */
+.member-subscrip-content form {
+    border: 1px solid #48BEA0;
+    /* position: relative; */
+}
+
+.member-subscrip-content form .form-group label {
+    width: 100%;
+}
+
+.member-subscrip-content form .form-group textarea {
+    width: 100%;
+    min-height: 140px;
+    padding: 14px 16px;
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+    font-size: clamp(10px, 2vw, 14px);
+    resize: none;
+}
+
+.member-subscrip-content .upload-file1 {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -2112,6 +2129,7 @@ section {
 
 
 }
+
 
 .member-subscrip-content .upload-file label {
     text-align: center;
@@ -2153,6 +2171,7 @@ section {
     background: #F5F5F5;
     padding: 2px;
     border-radius: 8px;
+    background: #000;
 }
 
 .profile-img img {
@@ -2271,6 +2290,7 @@ section {
     border-collapse: separate;
     border-spacing: 0;
 }
+
 .table-scroll {
     height: 100%;
     max-height: 300px;
@@ -2278,12 +2298,14 @@ section {
     border-radius: 12px;
     position: relative;
 }
+
 .invoice-table thead {
     background: linear-gradient(90deg, #1A428A 0%, #48BEA0 100%);
     position: sticky;
     top: 0;
     z-index: 2;
 }
+
 .invoice-table thead th:first-child {
     border-top-right-radius: 16px;
 }
@@ -2321,8 +2343,7 @@ section {
 }
 
 /* pay-book end */
-    /* position: relative; */
-}
+
 
 
 .auth-form .boxB .login-box form .form-group input,
@@ -2366,7 +2387,7 @@ section {
 }
 
 .auth-form .boxB .login-box form .form-group i,
-.auth-form .boxB .register-box form .form-group i{
+.auth-form .boxB .register-box form .form-group i {
 
     color: var(--color-gray);
     left: 10px;
@@ -2376,7 +2397,7 @@ section {
 
 
 .auth-form .boxB .login-box a,
-.auth-form .boxB .register-box a{
+.auth-form .boxB .register-box a {
 
     font-size: 14px;
     color: var(--color-Primary1);
@@ -2387,7 +2408,7 @@ section {
 }
 
 .auth-form .boxB .login-box a:hover,
-.auth-form .boxB .register-box a:hover{
+.auth-form .boxB .register-box a:hover {
     color: var(--color-Primary2);
     transition: all 0.3s ease;
     text-decoration: underline !important;
@@ -2396,22 +2417,18 @@ section {
 
 
 .auth-form .boxA .hello-box-register,
-.auth-form .boxB .register-box{
+.auth-form .boxB .register-box {
     display: none;
 }
 
 
 
-.auth-form .row{
+.auth-form .row {
 
     transition: all 0.3s ease;
 }
-.auth-form .row.row-reverse{
+
+.auth-form .row.row-reverse {
     flex-direction: row-reverse;
     transition: all 0.3s ease;
 }
-
-
-
-
-
