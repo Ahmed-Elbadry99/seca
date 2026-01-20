@@ -1947,6 +1947,29 @@ section {
     font-family: "English" !important;
 }
 
+
+/* member-subscripe */
+.member-subscrip-content form {
+    border: 1px solid #48BEA0;
+    ;
+}
+
+.member-subscrip-content form .form-group label {
+    width: 100%;
+}
+
+.member-subscrip-content form .form-group textarea {
+    width: 100%;
+    min-height: 140px;
+    padding: 14px 16px;
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+    font-size: clamp(10px, 2vw, 14px);
+    resize: none;
+}
+
+
+
 /* auth form */
 .auth-form .row,
 .auth-form {
@@ -2066,44 +2089,10 @@ section {
     gap: 10px;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(90deg, #1A428A 0%, #48BEA0 100%);
-    width: 150px;
-    height: 150px;
-    margin: 0 auto;
-    border-radius: 50%;
-    border: 1px solid var(--color-Primary1);
-    cursor: pointer;
-    overflow: hidden;
-
-}
-
-
-/* member-subscripe */
-.member-subscrip-content form {
-    border: 1px solid #48BEA0;
-    /* position: relative; */
-}
-
-.member-subscrip-content form .form-group label {
-    width: 100%;
-}
-
-.member-subscrip-content form .form-group textarea {
-    width: 100%;
-    min-height: 140px;
-    padding: 14px 16px;
-    border-radius: 8px;
-    border: 1px solid var(--color-border);
-    font-size: clamp(10px, 2vw, 14px);
-    resize: none;
+    position: relative;
 }
 
 .member-subscrip-content .upload-file1 {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
     background: linear-gradient(90deg, #1A428A 0%, #48BEA0 100%);
     width: 150px;
     height: 150px;
@@ -2112,14 +2101,13 @@ section {
     border: 1px solid var(--color-Primary1);
     cursor: pointer;
     overflow: hidden;
-
-
 
     .img-upload1 {
         border-radius: 50%;
         /* width: 100%; */
         height: auto;
     }
+}
 
     .upload-file1 img.default {
         width: 50px;
@@ -2127,8 +2115,6 @@ section {
         object-fit: contain;
     }
 
-
-}
 
 
 .member-subscrip-content .upload-file label {
@@ -2171,7 +2157,6 @@ section {
     background: #F5F5F5;
     padding: 2px;
     border-radius: 8px;
-    background: #000;
 }
 
 .profile-img img {
