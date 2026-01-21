@@ -1948,32 +1948,12 @@ section {
 }
 
 
-/* member-subscripe */
-.member-subscrip-content form {
-    border: 1px solid #48BEA0;
-}
-
-.member-subscrip-content form .form-group label {
-    width: 100%;
-}
-
-.member-subscrip-content form .form-group textarea {
-    width: 100%;
-    min-height: 140px;
-    padding: 14px 16px;
-    border-radius: 8px;
-    border: 1px solid var(--color-border);
-    font-size: clamp(10px, 2vw, 14px);
-    resize: none;
-}
-
-.member-subscrip-content .upload-file1 {
 
 
 /* auth form */
-.auth-form .row ,
+.auth-form .row,
 .auth-form {
-    min-height: 100vh; 
+    min-height: 100vh;
 }
 
 
@@ -1995,7 +1975,7 @@ section {
     gap: 20px;
     align-items: center;
     justify-content: center;
-    text-align: center; 
+    text-align: center;
 }
 
 
@@ -2012,10 +1992,10 @@ section {
 .auth-form .boxA .hello-box-register p {
     font-size: clamp(10px, 5vw, 16px);
     font-weight: 500;
-    color: var(--color-white);  
+    color: var(--color-white);
     text-align: center;
     line-height: 1.7;
-}   
+}
 
 
 /* login box */
@@ -2032,18 +2012,18 @@ section {
 .auth-form .boxB .login-box,
 .auth-form .boxB .register-box,
 .auth-form .boxB .login-box form,
-.auth-form .boxB .register-box form  {
+.auth-form .boxB .register-box form {
 
     display: flex;
     flex-direction: column;
     gap: 20px;
     align-items: center;
     justify-content: center;
-    text-align: center; 
+    text-align: center;
     width: 100%;
 }
 
-.auth-form .boxB .login-box-content{
+.auth-form .boxB .login-box-content {
 
     display: flex;
     flex-direction: column;
@@ -2052,26 +2032,28 @@ section {
     justify-content: center;
     text-align: center;
 }
-.auth-form .boxB .login-box-content h2{
+
+.auth-form .boxB .login-box-content h2 {
 
     font-size: clamp(16px, 3vw, 48px);
     color: var(--color-Primary1);
 }
 
-.auth-form .boxB .login-box-content p{
+.auth-form .boxB .login-box-content p {
     font-size: clamp(10px, 5vw, 16px);
     color: var(--color-gray);
 }
 
-.auth-form .boxB .main-container{
+.auth-form .boxB .main-container {
 
-    display: flex;  
+    display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
+
 .auth-form .boxB .login-box,
-.auth-form .boxB .register-box{
+.auth-form .boxB .register-box {
 
     width: 80%;
 }
@@ -2097,6 +2079,28 @@ section {
     overflow: hidden;
 
 
+}
+
+/* member-subscripe */
+.member-subscrip-content form {
+    border: 1px solid #48BEA0;
+}
+
+.member-subscrip-content form .form-group label {
+    width: 100%;
+}
+
+.member-subscrip-content form .form-group textarea {
+    width: 100%;
+    min-height: 140px;
+    padding: 14px 16px;
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+    font-size: clamp(10px, 2vw, 14px);
+    resize: none;
+}
+
+.member-subscrip-content .upload-file1 {
 
     .img-upload1 {
         border-radius: 50%;
@@ -2110,217 +2114,217 @@ section {
         object-fit: contain;
     }
 
-
-}
-
-.member-subscrip-content .upload-file label {
-    text-align: center;
-}
-
-.member-subscrip-content form .form-group .custom-list {
-    padding: 0 20px;
-    color: #737373;
-}
-
-.member-subscrip-content form .form-group .custom-list li {
-    display: list-item;
-    font-size: 16px;
-    line-height: 26px;
-}
-
-.member-subscrip-content form .form-group .checkbox-wrap {
-    font-size: 15px;
-    color: #45C2B1;
-}
-
-.member-subscrip-content form .form-group .checkbox-wrap #agreeCheck {
-    margin-left: 5px;
-}
-
-.member-subscrip-content form .form-group .ctm-btn.disabled {
-    background: #cfcfcf;
-    cursor: not-allowed;
-    opacity: 0.6;
-}
-
-/* member-subscripe end */
-
-/* nav bar */
-.profile-img {
-    width: 45px;
-    height: 45px;
-    object-fit: cover;
-    background: #F5F5F5;
-    padding: 2px;
-    border-radius: 8px;
-}
-
-.profile-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* nav bar end */
-/* profile */
-.profile-title {
-    width: 100%;
-    text-align: right !important;
-}
-
-.profile-content {
-    margin: 30px auto;
-}
-
-.profile-content .profile-account {
-    text-align: center;
-}
-
-.profile-content .profile-account img {
-    margin-bottom: 20px;
-}
-
-.profile-content .profile-account h3 {
-    font-size: 15px;
-    font-weight: bold;
-    color: #333333;
-}
-
-.profile-content .profile-account p {
-    font-size: 12px;
-    font-weight: 500;
-    color: #3333338e;
-}
-
-.profile-content .profile-links {
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column;
-    gap: clamp(20px, 2vw, 30px);
-}
-
-.profile-content .profile-links .link.active a {
-    color: #45C2B1;
-    font-weight: bold;
-}
-
-.profile-content .profile-links .link.active img {
-    filter: invert(1);
-}
-
-.profile-content .profile-links .link a {
-    color: #D4D4D4;
-}
-
-/* profile-membership */
-.profile-membership form .form-group {
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.profile-membership form .form-group h6 {
-    color: #A5A5A5;
-    font-size: 14px;
-    font-weight: 500;
-}
-
-.profile-membership form .form-group span {
-    color: #525252;
-    font-size: 16px;
-    font-weight: 400;
-}
-
-.profile-membership form .form-group span.active {
-    background: #34C75926;
-    color: #34C759;
-    padding: 8px 12px;
-    border-radius: 8px;
-}
-
-.profile-membership form .form-group .form-group-left .ctm-btn,
-.profile-membership form .form-group .form-group-right .ctm-btn {
-    width: 100%;
-    margin-top: 10px;
-    border: 1px solid #45C2B1;
-    background: #fff;
-    color: #45C2B1 !important;
-}
-
-/* profile-membership end */
-/* profile end */
-
-/* pay-book */
-.table-wrapper {
-    /* position: relative; */
-    z-index: 100;
-    width: 100%;
-    max-width: 900px;
-    overflow: auto;
-    margin: 30px auto;
-    border-radius: 16px;
-    box-shadow: 0 25px 7px 0 rgba(0, 0, 0, 0), 0 16px 6px 0 rgba(0, 0, 0, 0.01), 0 9px 5px 0 rgba(0, 0, 0, 0.05), 0 4px 4px 0 rgba(0, 0, 0, 0.09), 0 1px 10px 0 rgba(0, 0, 0, .1);
-    background-color: #fff;
-    border: 1px solid #48BEA0;
-    padding: 40px 20px;
-}
-
-.invoice-table {
-    width: 100%;
-    min-width: 700px;
-    border-collapse: separate;
-    border-spacing: 0;
-}
-.table-scroll {
-    height: 100%;
-    max-height: 300px;
-    overflow: auto;
-    border-radius: 12px;
-    position: relative;
-}
-.invoice-table thead {
-    background: linear-gradient(90deg, #1A428A 0%, #48BEA0 100%);
-    position: sticky;
-    top: 0;
-    z-index: 2;
-}
-.invoice-table thead th:first-child {
-    border-top-right-radius: 16px;
-}
-
-.invoice-table thead th:last-child {
-    border-top-left-radius: 16px;
-}
-
-.invoice-table th {
-    color: var(--color-white);
-    padding: 14px;
-    text-align: center;
-    font-weight: 600;
-}
-
-.invoice-table td {
-    padding: 14px;
-    text-align: center;
-    border-bottom: 1px solid #e0e0e0;
-    color: #252525;
-    font-size: 14px;
-}
-
-.invoice-table tbody tr:hover {
-    background: #f5f7fa;
-}
-
-@media (max-width: 768px) {
-
-    .invoice-table th,
-    .invoice-table td {
-        padding: 10px;
-        font-size: 12px;
+    .member-subscrip-content .upload-file label {
+        text-align: center;
     }
-}
 
-/* pay-book end */
+    .member-subscrip-content form .form-group .custom-list {
+        padding: 0 20px;
+        color: #737373;
+    }
+
+    .member-subscrip-content form .form-group .custom-list li {
+        display: list-item;
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .member-subscrip-content form .form-group .checkbox-wrap {
+        font-size: 15px;
+        color: #45C2B1;
+    }
+
+    .member-subscrip-content form .form-group .checkbox-wrap #agreeCheck {
+        margin-left: 5px;
+    }
+
+    .member-subscrip-content form .form-group .ctm-btn.disabled {
+        background: #cfcfcf;
+        cursor: not-allowed;
+        opacity: 0.6;
+    }
+
+    /* member-subscripe end */
+
+    /* nav bar */
+    .profile-img {
+        width: 45px;
+        height: 45px;
+        object-fit: cover;
+        background: #F5F5F5;
+        padding: 2px;
+        border-radius: 8px;
+    }
+
+    .profile-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* nav bar end */
+    /* profile */
+    .profile-title {
+        width: 100%;
+        text-align: right !important;
+    }
+
+    .profile-content {
+        margin: 30px auto;
+    }
+
+    .profile-content .profile-account {
+        text-align: center;
+    }
+
+    .profile-content .profile-account img {
+        margin-bottom: 20px;
+    }
+
+    .profile-content .profile-account h3 {
+        font-size: 15px;
+        font-weight: bold;
+        color: #333333;
+    }
+
+    .profile-content .profile-account p {
+        font-size: 12px;
+        font-weight: 500;
+        color: #3333338e;
+    }
+
+    .profile-content .profile-links {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: clamp(20px, 2vw, 30px);
+    }
+
+    .profile-content .profile-links .link.active a {
+        color: #45C2B1;
+        font-weight: bold;
+    }
+
+    .profile-content .profile-links .link.active img {
+        filter: invert(1);
+    }
+
+    .profile-content .profile-links .link a {
+        color: #D4D4D4;
+    }
+
+    /* profile-membership */
+    .profile-membership form .form-group {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .profile-membership form .form-group h6 {
+        color: #A5A5A5;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .profile-membership form .form-group span {
+        color: #525252;
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .profile-membership form .form-group span.active {
+        background: #34C75926;
+        color: #34C759;
+        padding: 8px 12px;
+        border-radius: 8px;
+    }
+
+    .profile-membership form .form-group .form-group-left .ctm-btn,
+    .profile-membership form .form-group .form-group-right .ctm-btn {
+        width: 100%;
+        margin-top: 10px;
+        border: 1px solid #45C2B1;
+        background: #fff;
+        color: #45C2B1 !important;
+    }
+
+    /* profile-membership end */
+    /* profile end */
+
+    /* pay-book */
+    .table-wrapper {
+        /* position: relative; */
+        z-index: 100;
+        width: 100%;
+        max-width: 900px;
+        overflow: auto;
+        margin: 30px auto;
+        border-radius: 16px;
+        box-shadow: 0 25px 7px 0 rgba(0, 0, 0, 0), 0 16px 6px 0 rgba(0, 0, 0, 0.01), 0 9px 5px 0 rgba(0, 0, 0, 0.05), 0 4px 4px 0 rgba(0, 0, 0, 0.09), 0 1px 10px 0 rgba(0, 0, 0, .1);
+        background-color: #fff;
+        border: 1px solid #48BEA0;
+        padding: 40px 20px;
+    }
+
+    .invoice-table {
+        width: 100%;
+        min-width: 700px;
+        border-collapse: separate;
+        border-spacing: 0;
+    }
+
+    .table-scroll {
+        height: 100%;
+        max-height: 300px;
+        overflow: auto;
+        border-radius: 12px;
+        position: relative;
+    }
+
+    .invoice-table thead {
+        background: linear-gradient(90deg, #1A428A 0%, #48BEA0 100%);
+        position: sticky;
+        top: 0;
+        z-index: 2;
+    }
+
+    .invoice-table thead th:first-child {
+        border-top-right-radius: 16px;
+    }
+
+    .invoice-table thead th:last-child {
+        border-top-left-radius: 16px;
+    }
+
+    .invoice-table th {
+        color: var(--color-white);
+        padding: 14px;
+        text-align: center;
+        font-weight: 600;
+    }
+
+    .invoice-table td {
+        padding: 14px;
+        text-align: center;
+        border-bottom: 1px solid #e0e0e0;
+        color: #252525;
+        font-size: 14px;
+    }
+
+    .invoice-table tbody tr:hover {
+        background: #f5f7fa;
+    }
+
+    @media (max-width: 768px) {
+
+        .invoice-table th,
+        .invoice-table td {
+            padding: 10px;
+            font-size: 12px;
+        }
+    }
+
+    /* pay-book end */
     /* position: relative; */
 }
 
@@ -2366,7 +2370,7 @@ section {
 }
 
 .auth-form .boxB .login-box form .form-group i,
-.auth-form .boxB .register-box form .form-group i{
+.auth-form .boxB .register-box form .form-group i {
 
     color: var(--color-gray);
     left: 10px;
@@ -2376,7 +2380,7 @@ section {
 
 
 .auth-form .boxB .login-box a,
-.auth-form .boxB .register-box a{
+.auth-form .boxB .register-box a {
 
     font-size: 14px;
     color: var(--color-Primary1);
@@ -2387,31 +2391,24 @@ section {
 }
 
 .auth-form .boxB .login-box a:hover,
-.auth-form .boxB .register-box a:hover{
+.auth-form .boxB .register-box a:hover {
     color: var(--color-Primary2);
     transition: all 0.3s ease;
     text-decoration: underline !important;
 }
-
-
-
 .auth-form .boxA .hello-box-register,
-.auth-form .boxB .register-box{
+.auth-form .boxB .register-box {
     display: none;
 }
 
 
 
-.auth-form .row{
+.auth-form .row {
 
     transition: all 0.3s ease;
 }
-.auth-form .row.row-reverse{
+
+.auth-form .row.row-reverse {
     flex-direction: row-reverse;
     transition: all 0.3s ease;
 }
-
-
-
-
-
