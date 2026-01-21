@@ -2081,7 +2081,8 @@ section {
 
 
 .auth-form .boxB .login-box form .form-group,
-.auth-form .boxB .register-box form .form-group {
+.auth-form .boxB .register-box form .form-group,
+.forger-pass .forget-pass-card .main-container .form-group {
 
     width: 100%;
     display: flex;
@@ -2109,11 +2110,11 @@ section {
     }
 }
 
-    .upload-file1 img.default {
-        width: 50px;
-        height: 50px;
-        object-fit: contain;
-    }
+.upload-file1 img.default {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
 
 
 
@@ -2326,12 +2327,14 @@ section {
         font-size: 12px;
     }
 
-/* pay-book end */
+    /* pay-book end */
 
 
 }
+
 .auth-form .boxB .login-box form .form-group input,
-.auth-form .boxB .register-box form .form-group input {
+.auth-form .boxB .register-box form .form-group input,
+.forger-pass .forget-pass-card .main-container .form-group input {
     width: 100%;
     height: 45px;
     border-radius: 10px;
@@ -2347,12 +2350,14 @@ section {
 }
 
 .auth-form .boxB .login-box form .form-group input:focus,
-.auth-form .boxB .register-box form .form-group input:focus {
+.auth-form .boxB .register-box form .form-group input:focus,
+.forger-pass .forget-pass-card .main-container .form-group input:focus {
     border: 1px solid var(--color-Primary1);
 }
 
 .auth-form .boxB .login-box form .form-group input::placeholder,
-.auth-form .boxB .register-box form .form-group input::placeholder {
+.auth-form .boxB .register-box form .form-group input::placeholder,
+.forger-pass .forget-pass-card .main-container .form-group input::placeholder {
 
     color: var(--color-gray);
     font-size: 14px;
@@ -2360,6 +2365,7 @@ section {
 
 .auth-form .boxB .login-box form .form-group img,
 .auth-form .boxB .register-box form .form-group img,
+.forger-pass .forget-pass-card .main-container .form-group img,
 .auth-form .boxB .login-box form .form-group i,
 .auth-form .boxB .register-box form .form-group i {
     position: absolute;
@@ -2371,8 +2377,9 @@ section {
 }
 
 .auth-form .boxB .login-box form .form-group i,
-.auth-form .boxB .register-box form .form-group i {
-
+.auth-form .boxB .register-box form .form-group i ,
+.forger-pass .forget-pass-card .main-container .form-group i {
+    position: absolute;
     color: var(--color-gray);
     left: 10px;
     right: unset;
@@ -2397,6 +2404,7 @@ section {
     transition: all 0.3s ease;
     text-decoration: underline !important;
 }
+
 .auth-form .boxA .hello-box-register,
 .auth-form .boxB .register-box {
     display: none;
@@ -2413,3 +2421,99 @@ section {
     flex-direction: row-reverse;
     transition: all 0.3s ease;
 }
+
+
+/* forget password */
+.page-rest {
+    position: relative;
+}
+
+.page-rest::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url(../images/bg-pass-forget.svg);
+    /* background-size: contain; */
+    /* background-position: left; */
+    background-repeat: no-repeat;
+}
+
+.logo-pass {
+    width: 120px;
+    height: auto;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.forger-pass {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    background: var(--color-white);
+}
+
+.forget-pass-card {
+    width: 100%;
+    max-width: 620px;
+}
+
+.forger-pass .forget-pass-card .main-container .form-group {
+    margin: 20px auto;
+}
+
+.forger-pass .forget-pass-card .main-container .login-box-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.forger-pass .forget-pass-card .main-container .login-box-content h2 {
+    font-size: clamp(16px, 3vw, 48px);
+    color: var(--color-Primary1);
+}
+
+.forger-pass .forget-pass-card .main-container .login-box-content p {
+    font-size: clamp(10px, 5vw, 16px);
+    color: var(--color-gray);
+}
+
+.forger-pass .forget-pass-card .main-container .ctm-btn {
+    margin: 20px auto;
+}
+
+.forger-pass .forget-pass-card .main-container .form-group label {
+    display: flex;
+    justify-content: start;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--color-text);
+}
+.forger-pass .forget-pass-card .main-container .form-group .number-validate {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    max-width: 480px;
+    margin: 8px auto;
+    direction: ltr;
+}
+.forger-pass .forget-pass-card .main-container .form-group .number-validate input {
+    max-width: 70px;
+    margin: 0 auto;
+    height: 40px;
+    text-align: center;
+    font-size: 24px;
+    border: 1px solid #BDBDBD;
+    border-radius: 8px;
+}
+
+
+/* forget password end */

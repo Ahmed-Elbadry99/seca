@@ -56,26 +56,81 @@
                 <div class="forget-pass-card">
                     <form action="#" class="main-container">
                         <div class="login-box-content">
-                            <h2>استعادة كلمة المرور</h2>
+                            <h2>التحقق من OTP
+                            </h2>
                             <p>
-                                يرجى إدخال بريدك الإلكتروني المسجل لدينا، وسنقوم بإرسال رمز التحقق (OTP) لضمان أمان
-                                حسابك
-                                وإعادة تعيين كلمة المرور
-                                الخاصة بك.
+                                يرجى إدخال رمز التحقق (OTP) المكون من 6 أرقام والذي تم إرساله إلى بريدك الإلكتروني يمكنك
+                                طلب إعادة الإرسال بعد 60 ثانية.
+                                تحقق
                             </p>
                         </div>
                         <div class="form-group">
-                            <input type="email" placeholder="البريد الإلكتروني">
-                            <img src="./images/mail.svg" alt="">
+                            <label for="number">كود التحقق<span class="required">*</span></label>
+                            <div class="number-validate">
+                                <input class="otp" inputmode="numeric" pattern="[0-9]*" autocomplete="one-time-code">
+                                <input class="otp" inputmode="numeric" pattern="[0-9]*">
+                                <input class="otp" inputmode="numeric" pattern="[0-9]*">
+                                <input class="otp" inputmode="numeric" pattern="[0-9]*">
+                                <input class="otp" inputmode="numeric" pattern="[0-9]*">
+                            </div>
                         </div>
                         <button type="submit" class="ctm-btn">
-                            أرسال
+                            تحقق
                         </button>
                     </form>
                 </div>
             </div>
         </div>
     </main>
+
+    <script>
+        // const togglePassword = document.querySelector(".toggle-password");
+        // const passwordInput = document.querySelector("#password");
+
+        // togglePassword.addEventListener("click", () => {
+        //     const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
+        //     passwordInput.setAttribute("type", type);
+        // });
+
+        // vrify OTP
+        const otpInputs = document.querySelectorAll(".otp");
+
+        otpInputs.forEach((input, index) => {
+            input.addEventListener("input", (e) => {
+                input.value = input.value.replace(/[^0-9]/g, "").slice(0, 1);
+
+                if (input.value && index < otpInputs.length - 1) {
+                    otpInputs[index + 1].focus();
+                }
+            });
+
+            input.addEventListener("keydown", (e) => {
+                if (e.key === "Backspace" && !input.value && index > 0) {
+                    otpInputs[index - 1].focus();
+                }
+            });
+
+            input.addEventListener("paste", (e) => {
+                e.preventDefault();
+                const data = e.clipboardData.getData("text").replace(/\D/g, "");
+
+                data.split("").forEach((char, i) => {
+                    if (otpInputs[i]) {
+                        otpInputs[i].value = char;
+                    }
+                });
+
+                const lastFilled = Math.min(data.length, otpInputs.length) - 1;
+                if (lastFilled >= 0) {
+                    otpInputs[lastFilled].focus();
+                }
+            });
+        });
+
+
+        // vrify OTP end
+
+    </script>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
