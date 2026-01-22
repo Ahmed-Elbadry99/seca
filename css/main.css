@@ -1987,8 +1987,9 @@ section {
 }
 
 
-.auth-form .boxA .hello-box-login,
-.auth-form .boxA .hello-box-register {
+.hello-box-login,
+ .hello-box-register ,
+.hello-box-register {
 
     display: flex;
     flex-direction: column;
@@ -1999,8 +2000,9 @@ section {
 }
 
 
-.auth-form .boxA .hello-box-login h2,
-.auth-form .boxA .hello-box-register h2 {
+.hello-box-login h2,
+.hello-box-register h2 ,
+ .hello-box-register h2 {
     font-size: clamp(16px, 3vw, 48px);
     font-family: 'font_bold';
     color: var(--color-white);
@@ -2008,8 +2010,9 @@ section {
     margin-bottom: 20px;
 }
 
-.auth-form .boxA .hello-box-login p,
-.auth-form .boxA .hello-box-register p {
+.hello-box-login p,
+.hello-box-register p ,
+ .hello-box-register p {
     font-size: clamp(10px, 5vw, 16px);
     font-weight: 500;
     color: var(--color-white);
@@ -2029,10 +2032,10 @@ section {
 }
 
 
-.auth-form .boxB .login-box,
-.auth-form .boxB .register-box,
-.auth-form .boxB .login-box form,
-.auth-form .boxB .register-box form {
+.login-box,
+.register-box,
+ .login-box form,
+ .register-box form {
 
     display: flex;
     flex-direction: column;
@@ -2043,7 +2046,7 @@ section {
     width: 100%;
 }
 
-.auth-form .boxB .login-box-content {
+ .login-box-content {
 
     display: flex;
     flex-direction: column;
@@ -2053,18 +2056,18 @@ section {
     text-align: center;
 }
 
-.auth-form .boxB .login-box-content h2 {
+ .login-box-content h2 {
 
     font-size: clamp(16px, 3vw, 48px);
     color: var(--color-Primary1);
 }
 
-.auth-form .boxB .login-box-content p {
+.login-box-content p {
     font-size: clamp(10px, 5vw, 16px);
     color: var(--color-gray);
 }
 
-.auth-form .boxB .main-container {
+ .main-container {
 
     display: flex;
     align-items: center;
@@ -2072,16 +2075,16 @@ section {
     flex-direction: column;
 }
 
-.auth-form .boxB .login-box,
-.auth-form .boxB .register-box {
+.login-box,
+.register-box {
 
     width: 80%;
 }
 
 
 
-.auth-form .boxB .login-box form .form-group,
-.auth-form .boxB .register-box form .form-group,
+.login-box form .form-group,
+ .register-box form .form-group,
 .forger-pass .forget-pass-card .main-container .form-group {
 
     width: 100%;
@@ -2332,8 +2335,8 @@ section {
 
 }
 
-.auth-form .boxB .login-box form .form-group input,
-.auth-form .boxB .register-box form .form-group input,
+.login-box form .form-group input,
+.register-box form .form-group input,
 .forger-pass .forget-pass-card .main-container .form-group input {
     width: 100%;
     height: 45px;
@@ -2349,25 +2352,25 @@ section {
     padding-right: 40px;
 }
 
-.auth-form .boxB .login-box form .form-group input:focus,
-.auth-form .boxB .register-box form .form-group input:focus,
+.login-box form .form-group input:focus,
+.register-box form .form-group input:focus,
 .forger-pass .forget-pass-card .main-container .form-group input:focus {
     border: 1px solid var(--color-Primary1);
 }
 
-.auth-form .boxB .login-box form .form-group input::placeholder,
-.auth-form .boxB .register-box form .form-group input::placeholder,
+ .login-box form .form-group input::placeholder,
+.register-box form .form-group input::placeholder,
 .forger-pass .forget-pass-card .main-container .form-group input::placeholder {
 
     color: var(--color-gray);
     font-size: 14px;
 }
 
-.auth-form .boxB .login-box form .form-group img,
-.auth-form .boxB .register-box form .form-group img,
+ .login-box form .form-group img,
+ .register-box form .form-group img,
 .forger-pass .forget-pass-card .main-container .form-group img,
-.auth-form .boxB .login-box form .form-group i,
-.auth-form .boxB .register-box form .form-group i {
+ .login-box form .form-group i,
+.register-box form .form-group i {
     position: absolute;
     width: 20px;
     height: 20px;
@@ -2376,8 +2379,8 @@ section {
     transform: translateY(-50%);
 }
 
-.auth-form .boxB .login-box form .form-group i,
-.auth-form .boxB .register-box form .form-group i ,
+.login-box form .form-group i,
+ .register-box form .form-group i ,
 .forger-pass .forget-pass-card .main-container .form-group i {
     position: absolute;
     color: var(--color-gray);
@@ -2387,8 +2390,8 @@ section {
 }
 
 
-.auth-form .boxB .login-box a,
-.auth-form .boxB .register-box a {
+.login-box a,
+.register-box a {
 
     font-size: 14px;
     color: var(--color-Primary1);
@@ -2398,17 +2401,14 @@ section {
     transition: all 0.3s ease;
 }
 
-.auth-form .boxB .login-box a:hover,
-.auth-form .boxB .register-box a:hover {
+ .login-box a:hover,
+ .register-box a:hover {
     color: var(--color-Primary2);
     transition: all 0.3s ease;
     text-decoration: underline !important;
 }
 
-.auth-form .boxA .hello-box-register,
-.auth-form .boxB .register-box {
-    display: none;
-}
+
 
 
 
@@ -2517,3 +2517,208 @@ section {
 
 
 /* forget password end */
+
+
+/* login register */
+
+.container-login-register {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.container-login-register h1 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--color-Primary1);
+}
+
+.container-login-register p {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    margin: 20px 0;
+    width: 95%;
+}
+
+.container-login-register span {
+    font-size: 12px;
+}
+
+.container-login-register a {
+    color: #333;
+    font-size: 13px;
+    text-decoration: none;
+    margin: 15px 0 10px;
+}
+
+.container-login-register button {
+    background: linear-gradient(0deg, #1A428A 0%, #48BEA0 100%);
+    color: #fff;
+    padding: 10px 45px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: all .3s linear;
+}
+
+.container-login-register button.hidden {
+    background-color: transparent;
+    border-color: #fff;
+}
+
+.container-login-register button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px #48BEA0;
+}
+
+.container-login-register form {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 40px;
+    height: 100%;
+}
+
+.container-login-register input {
+    background-color: #eee;
+    border: none;
+    margin: 8px 0;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 8px;
+    width: 100%;
+    outline: none;
+}
+
+.form-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+}
+
+.sign-in {
+    left: 0;
+    width: 50%;
+    z-index: 2;
+}
+
+.container-login-register.active .sign-in {
+    transform: translateX(100%);
+}
+
+.sign-up {
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+}
+
+.container-login-register.active .sign-up {
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: move 0.6s;
+}
+
+@keyframes move {
+
+    0%,
+    49% {
+        opacity: 0;
+        z-index: 1;
+    }
+
+    50%,
+    100% {
+        opacity: 1;
+        z-index: 5;
+    }
+}
+
+.social-icons {
+    margin: 20px 0;
+}
+
+.social-icons a {
+    border: 1px solid #ccc;
+    border-radius: 20%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 3px;
+    width: 40px;
+}
+
+.toggle-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 50%;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+    z-index: 1000;
+}
+
+.container-login-register.active .toggle-container {
+    transform: translateX(-100%);
+}
+
+.toggle {
+    height: 100%;
+    background: linear-gradient(0deg, #1A428A 0%, #48BEA0 100%);
+    color: #fff;
+    position: relative;
+    left: 0;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.container-login-register.active .toggle {
+    /* transform: translateX(50%); */
+}
+
+.toggle-panel {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    top: 0;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.toggle-left {
+    transform: translateX(-200%);
+}
+
+.container-login-register.active .toggle-left {
+    transform: translateX(0);
+}
+
+.toggle-right {
+    right: 0;
+    transform: translateX(0);
+}
+
+.container-login-register.active .toggle-right {
+    transform: translateX(200%);
+}
+/* login register end */

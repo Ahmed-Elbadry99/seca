@@ -348,51 +348,71 @@ passwordInputs.forEach(input => {
 
 
 
-// switch button
-
-// const switchBtn = document.querySelectorAll(".switch-btn");
-// const formSwitch = document.querySelector(".form-switch");
-
-// if(switchBtn){
-//   switchBtn.forEach(btn => {
-//     btn.addEventListener("click", () => {
-//       formSwitch.classList.toggle("row-reverse");
-//     });
-//   }); 
-//   }
 
 
-const btn = document.getElementById("swapBtn");
-const boxA = document.querySelector(".boxA");
-const boxB = document.querySelector(".boxB");
-const row = document.querySelector(".form-switchs");
 
-let swapped = false;
-let direction = -1; // 1 = أول حركة (A من اليمين، B من اليسار)، -1 = العكس
-const screenWidth = window.innerWidth;
 
-btn.addEventListener("click", () => {
+// login register
+const container = document.getElementById("container");
+const signUpButton = document.getElementById("register");
+const signInButton = document.getElementById("login");
 
-  // حساب اتجاه الخروج لكل Box حسب direction
-  const boxAX = screenWidth * direction;     // A يتحرك للخارج
-  const boxBX = -screenWidth * direction;    // B يتحرك للخارج
-
-  // حركة الخروج
-  gsap.to(boxA, { x: boxAX, duration: 0.7, ease: "power3.in" });
-  gsap.to(boxB, { x: boxBX, duration: 0.7, ease: "power3.in",
-    onComplete: () => {
-      // بعد الخروج، نعمل reverse بصري
-      row.style.flexDirection = swapped ? "row" : "row-reverse";
-
-      // دخول الأعمدة مرة أخرى من الخارج
-      gsap.fromTo([boxA, boxB],
-        { x: (i) => i === 0 ? -boxAX : -boxBX },
-        { x: 0, duration: 0.7, ease: "power3.out" }
-      );
-    }
-  });
-
-  // تبديل الحالة للضغط التالي
-  swapped = !swapped;
-  direction *= -1; // قلب الاتجاه للضغطة القادمة
+signUpButton.addEventListener("click", () => {
+    container.classList.add("active");
 });
+signInButton.addEventListener("click", () => {
+    container.classList.remove("active");
+});
+
+// Handle Sign Up
+if (signUpButton) {
+    signUpButton.addEventListener("click", () => {
+        const name = document.querySelector('.form-container.sign-up input[placeholder="Name"]').value;
+        const email = document.querySelector('.form-container.sign-up input[placeholder="Email"]').value;
+        const password = document.querySelector('.form-container.sign-up input[placeholder="Password"]').value;
+
+        if (name && email && password) {
+            localStorage.setItem("user", JSON.stringify({ name, email, password }));
+            window.location.href = "index.html";
+        } else {
+            console.log("Please fill in all fields");
+        }
+    });
+}
+
+// Handle Sign In
+if (signInButton) {
+    signInButton.addEventListener("click", () => {
+        const email = document.querySelector('.form-container.sign-in input[placeholder="Email"]').value;
+        const password = document.querySelector('.form-container.sign-in input[placeholder="Password"]').value;
+
+        const userData = JSON.parse(localStorage.getItem("user"));
+
+        if (userData && userData.email === email && userData.password === password) {
+            window.location.href = "index.html";
+        } else {
+            console.log("Invalid email or password");
+        }
+    });
+}
+
+// Check if user is logged in
+if (localStorage.getItem("user")) {
+    document.querySelectorAll(".auth-links").forEach((link) => (link.style.display = "none"));
+    document.querySelectorAll(".user-links").forEach((link) => (link.style.display = "block"));
+} else {
+    document.querySelectorAll(".auth-links").forEach((link) => (link.style.display = "block"));
+    document.querySelectorAll(".user-links").forEach((link) => (link.style.display = "none"));
+}
+
+// Handle Logout
+const logoutBtn = document.getElementById("logout");
+
+if (logoutBtn) {
+    logoutBtn.addEventListener("click", () => {
+        localStorage.removeItem("user");
+        window.location.href = "index.html";
+    });
+}
+
+// login register end
