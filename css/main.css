@@ -1988,7 +1988,7 @@ section {
 
 
 .hello-box-login,
- .hello-box-register ,
+.hello-box-register,
 .hello-box-register {
 
     display: flex;
@@ -2001,8 +2001,8 @@ section {
 
 
 .hello-box-login h2,
-.hello-box-register h2 ,
- .hello-box-register h2 {
+.hello-box-register h2,
+.hello-box-register h2 {
     font-size: clamp(16px, 3vw, 48px);
     font-family: 'font_bold';
     color: var(--color-white);
@@ -2011,8 +2011,8 @@ section {
 }
 
 .hello-box-login p,
-.hello-box-register p ,
- .hello-box-register p {
+.hello-box-register p,
+.hello-box-register p {
     font-size: clamp(10px, 5vw, 16px);
     font-weight: 500;
     color: var(--color-white);
@@ -2034,8 +2034,8 @@ section {
 
 .login-box,
 .register-box,
- .login-box form,
- .register-box form {
+.login-box form,
+.register-box form {
 
     display: flex;
     flex-direction: column;
@@ -2046,7 +2046,7 @@ section {
     width: 100%;
 }
 
- .login-box-content {
+.login-box-content {
 
     display: flex;
     flex-direction: column;
@@ -2056,7 +2056,7 @@ section {
     text-align: center;
 }
 
- .login-box-content h2 {
+.login-box-content h2 {
 
     font-size: clamp(16px, 3vw, 48px);
     color: var(--color-Primary1);
@@ -2067,13 +2067,14 @@ section {
     color: var(--color-gray);
 }
 
- .main-container {
+/* 
+.main-container {
 
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-}
+} */
 
 .login-box,
 .register-box {
@@ -2084,7 +2085,7 @@ section {
 
 
 .login-box form .form-group,
- .register-box form .form-group,
+.register-box form .form-group,
 .forger-pass .forget-pass-card .main-container .form-group {
 
     width: 100%;
@@ -2100,15 +2101,16 @@ section {
     background: linear-gradient(90deg, #1A428A 0%, #48BEA0 100%);
     width: 150px;
     height: 150px;
-    margin: 0 auto;
     border-radius: 50%;
     border: 1px solid var(--color-Primary1);
     cursor: pointer;
     overflow: hidden;
+    text-align: center;
 
     .img-upload1 {
         border-radius: 50%;
         /* width: 100%; */
+        /* margin: 50px; */
         height: auto;
     }
 }
@@ -2358,7 +2360,7 @@ section {
     border: 1px solid var(--color-Primary1);
 }
 
- .login-box form .form-group input::placeholder,
+.login-box form .form-group input::placeholder,
 .register-box form .form-group input::placeholder,
 .forger-pass .forget-pass-card .main-container .form-group input::placeholder {
 
@@ -2366,10 +2368,10 @@ section {
     font-size: 14px;
 }
 
- .login-box form .form-group img,
- .register-box form .form-group img,
+.login-box form .form-group img,
+.register-box form .form-group img,
 .forger-pass .forget-pass-card .main-container .form-group img,
- .login-box form .form-group i,
+.login-box form .form-group i,
 .register-box form .form-group i {
     position: absolute;
     width: 20px;
@@ -2380,7 +2382,7 @@ section {
 }
 
 .login-box form .form-group i,
- .register-box form .form-group i ,
+.register-box form .form-group i,
 .forger-pass .forget-pass-card .main-container .form-group i {
     position: absolute;
     color: var(--color-gray);
@@ -2401,8 +2403,8 @@ section {
     transition: all 0.3s ease;
 }
 
- .login-box a:hover,
- .register-box a:hover {
+.login-box a:hover,
+.register-box a:hover {
     color: var(--color-Primary2);
     transition: all 0.3s ease;
     text-decoration: underline !important;
@@ -2497,6 +2499,7 @@ section {
     font-weight: bold;
     color: var(--color-text);
 }
+
 .forger-pass .forget-pass-card .main-container .form-group .number-validate {
     display: flex;
     justify-content: space-between;
@@ -2505,6 +2508,7 @@ section {
     margin: 8px auto;
     direction: ltr;
 }
+
 .forger-pass .forget-pass-card .main-container .form-group .number-validate input {
     max-width: 70px;
     margin: 0 auto;
@@ -2529,6 +2533,7 @@ section {
     display: flex;
     justify-content: space-between;
 }
+
 .container-login-register h1 {
     font-size: 24px;
     font-weight: 600;
@@ -2721,4 +2726,452 @@ section {
 .container-login-register.active .toggle-right {
     transform: translateX(200%);
 }
+
+.sign-hello {
+    display: none;
+}
+
 /* login register end */
+
+
+@media (max-width:425px) {
+
+    .container-login-register form {
+        padding: 0 30px;
+        height: 70%;
+    }
+
+    .login-box-content {
+        gap: 0px;
+    }
+
+    .container-login-register button {
+        font-size: 8px;
+        padding: 0px;
+        margin-top: 0;
+    }
+
+    .container-login-register p,
+    .container-login-register a {
+        font-size: 10px;
+        margin: 10px 0;
+    }
+
+    .hello-box-login h2,
+    .hello-box-register h2,
+    .hello-box-register h2 {
+        margin-bottom: 0;
+    }
+
+    .hello-box-login,
+    .hello-box-register,
+    .hello-box-register {
+        gap: 0;
+    }
+
+    .login-box form .form-group input::placeholder,
+    .register-box form .form-group input::placeholder,
+    .forger-pass .forget-pass-card .main-container .form-group input::placeholder {
+        font-size: 10px;
+    }
+
+
+    .sign-hello {
+        display: flex;
+        height: 30%;
+        text-decoration: underline;
+    }
+
+
+    .login-box,
+    .register-box,
+    .login-box form,
+    .register-box form {
+        gap: 0px !important;
+    }
+
+    .toggle-container {
+        display: none;
+    }
+
+    .sign-in,
+    .sign-up {
+        width: 100%;
+    }
+
+    .container-login-register.active .sign-up {
+        transform: translateX(0%);
+    }
+}
+
+
+/* pdf imge css */
+.page {
+    padding: 20px 0;
+    width: 280px;
+    height: auto;
+    background: #e9f7f4;
+    margin: auto;
+}
+
+/* Logo */
+.page .logo {
+    text-align: center;
+    padding: 10px 0;
+    max-width: 150px;
+    max-height: 50px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.page.page .logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.page .card {
+    margin: 30px auto 0;
+    text-align: center;
+    background: transparent;
+    border: none;
+}
+
+.page .image-wrapper {
+    width: 120px;
+    height: 160px;
+    margin: 25px auto 0;
+}
+
+.page .photo {
+    width: 100%;
+    height: 100%;
+    margin-left: -20px;
+    margin-top: -20px;
+    background: #C9E7E4;
+    border-radius: 102px 102px 102px 8px;
+}
+
+.page .border-layer {
+    display: block;
+    width: 120px;
+    height: 170px;
+    border: 2px solid #C9E7E4;
+    border-radius: 102px 102px 102px 8px;
+    margin-top: -150px;
+}
+
+
+/* Name */
+.page .name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #1A428A;
+    margin: 10px 0 5px;
+}
+
+/* ID */
+.page .id {
+    font-size: 14px;
+    color: #1A428A;
+    font-weight: 400;
+    font-weight: bold;
+}
+
+/* Dates */
+.page .dates {
+    width: 100%;
+    margin: 20px 0;
+    font-size: 8px;
+    color: #fff;
+}
+
+.page .date {
+    background: #6bbfae;
+    padding: 3px 6px;
+    width: 110px;
+    height: auto;
+    font-weight: bold;
+}
+
+.page .left {
+    float: left;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.page .right {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+/* pdf imge css */
+
+
+/* styles new sections */
+/* events-handeln */
+.events-handeln .box {
+    padding: 0;
+    margin: 0;
+}
+
+.events-handeln .box .heading-section h2 {
+    width: 100%;
+    text-align: center;
+}
+
+/* events-handeln end */
+/* services-committees */
+.services-committees .card {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    /* gap: 20px; */
+    flex-wrap: wrap;
+    padding: 16px;
+    transition: all 0.5s ease-in-out;
+}
+
+.services-committees>div:nth-child(2) .card {
+    flex-direction: row-reverse;
+}
+
+.services-committees .card:hover,
+.traning .card:hover {
+    background: var(--color-Primary1);
+    cursor: pointer;
+}
+
+.services-committees .card:hover h2,
+.services-committees .card:hover .heading-section h4,
+.services-committees .card:hover .heading-section span,
+.services-committees .card:hover .heading-section ul li,
+.services-committees .card:hover .heading-section ul li::before,
+.traning .card:hover h2,
+.traning .card:hover p {
+    color: var(--color-white);
+}
+
+.services-committees .card .card-img {
+    height: 320px;
+    width: 50%;
+}
+
+.services-committees .card .card-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.services-committees .card .heading-section {
+    width: 40%;
+}
+
+.services-committees .card .heading-section h2 {
+    font-size: clamp(12px, 2vw, 16px);
+}
+
+/* .services-committees .card .heading-section ul{
+    display: block !important;
+    list-style: disc !important;
+    padding-left:20px ;
+} */
+.services-committees .card .heading-section ul li {
+    color: var(--color-text);
+    padding: 5px;
+    font-size: clamp(12px, 2vw, 16px);
+    position: relative;
+}
+
+.services-committees .card .heading-section ul li::before {
+    content: "•";
+    position: absolute;
+    right: -10px;
+    color: var(--color-text);
+    font-size: 18px;
+}
+
+.services-committees .card .heading-section h4 {
+    font-weight: 400;
+    font-size: 16px;
+    color: #1E1E1E;
+}
+
+.services-committees .card .heading-section h4 span {
+    color: var(--color-Primary1);
+}
+
+@media (max-width:1024px) {
+    .services-committees .card {
+        flex-direction: column;
+    }
+
+    .services-committees .card .heading-section {
+        width: 100%;
+    }
+
+    .services-committees .card .card-img {
+        width: 100%;
+    }
+}
+
+/* services-committees end */
+/* traning */
+.traning .card {
+    transition: all 0.5s ease-in-out;
+}
+
+.traning .card .card-img {
+    width: 100%;
+    height: 200px;
+}
+
+.traning .card .card-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.traning .card .heading-section {
+    display: inline;
+    padding: 10px;
+}
+
+.traning .card .heading-section h2,
+.traning .card .heading-section p {
+    font-size: clamp(12px, 5vw, 16px);
+    margin: 10px 0;
+}
+
+.traning .card:hover .ctm-btn {
+    background: var(--color-white) !important;
+    color: var(--color-Primary1) !important;
+}
+
+/* pop up */
+.modal-content {
+    border-radius: 12px;
+}
+
+.modal-title {
+    font-weight: bold;
+}
+
+.modal-title {
+    color: var(--color-Primary1);
+    border: none;
+}
+
+/* pop up end */
+/* traning end */
+
+
+.volunteering {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    gap: 50px;
+}
+
+.volunteering .circle {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.volunteering .circle .rounded-circle img {
+    width: 100%;
+    height: 100%;
+}
+
+.volunteering .circle .rounded-circle span {
+    position: absolute;
+    right: 50%;
+    top: 30%;
+    transform: translateX(50%);
+    font-size: clamp(24px, 2vw, 32px);
+    color: var(--color-Primary1);
+    font-weight: 700;
+}
+
+.volunteering .circle p {
+    font-size: clamp(12px, 2vw, 16px);
+    color: var(--color-text);
+    font-weight: 500;
+    text-align: center;
+}
+
+.volunteering-form .profile-title {
+    text-align: center !important;
+}
+
+@media (max-width: 1024px) {
+    .heading-wrapper .btn-volunteering {
+        display: inline-block !important;
+    }
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.buttons .ctm-btn-none {
+    border: 1px solid var(--color-Primary1);
+    color: var(--color-Primary1) !important;
+}
+
+.volunteering .card {
+    padding: 20px;
+    box-shadow:
+        0px 1px 2px #48BEA01A,
+        0px 4px 4px #48BEA017,
+        0px 9px 5px #48BEA00D,
+        0px 16px 6px #48BEA003,
+        0px 25px 7px #48BEA000;
+        border: none;
+}
+.volunteering .card img{
+    width: 50px;
+    height: 50px;
+}
+.volunteering .card p{
+    color: var(--color-Primary1);
+    font-size: clamp(12px,2vw,16px);
+}
+
+.experts-list {
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+.experts-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+}
+.experts-list li::before {
+    content: "•";
+    position: absolute;
+    right: 0px;
+    color: var(--color-text);
+    font-size: 18px;
+}
+
+.expert-name {
+    font-weight: 600;
+    color: var(--color-text);
+    font-size: 14px;
+}
+
+.expert-field {
+    color: var(--color-Primary1);
+    font-weight: 600;
+    font-size: 14px;
+}
+/* styles new sections end */

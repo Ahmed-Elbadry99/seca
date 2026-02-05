@@ -354,47 +354,91 @@ passwordInputs.forEach(input => {
 
 // login register
 const container = document.getElementById("container");
-const signUpButton = document.getElementById("register");
-const signInButton = document.getElementById("login");
+// const signUpButton = document.querySelectorAll  (".register");
+// const signInButton = document.querySelectorAll(".login");
 
-signUpButton.addEventListener("click", () => {
+document.querySelectorAll(".register").forEach((btn) => {
+  btn.addEventListener("click", () => {
     container.classList.add("active");
+  });
 });
-signInButton.addEventListener("click", () => {
+document.querySelectorAll(".login").forEach((btn) => {
+  btn.addEventListener("click", () => {
     container.classList.remove("active");
+  });
 });
+// signUpButton.addEventListener("click", () => {
+//     container.classList.add("active");
+// });
+// signInButton.addEventListener("click", () => {
+//     container.classList.remove("active");
+// });
 
 // Handle Sign Up
-if (signUpButton) {
-    signUpButton.addEventListener("click", () => {
-        const name = document.querySelector('.form-container.sign-up input[placeholder="Name"]').value;
-        const email = document.querySelector('.form-container.sign-up input[placeholder="Email"]').value;
-        const password = document.querySelector('.form-container.sign-up input[placeholder="Password"]').value;
+// if (signUpButton) {
+//     signUpButton.addEventListener("click", () => {
+//         const name = document.querySelector('.form-container.sign-up input[placeholder="Name"]').value;
+//         const email = document.querySelector('.form-container.sign-up input[placeholder="Email"]').value;
+//         const password = document.querySelector('.form-container.sign-up input[placeholder="Password"]').value;
 
-        if (name && email && password) {
-            localStorage.setItem("user", JSON.stringify({ name, email, password }));
-            window.location.href = "index.html";
-        } else {
-            console.log("Please fill in all fields");
-        }
-    });
-}
+//         if (name && email && password) {
+//             localStorage.setItem("user", JSON.stringify({ name, email, password }));
+//             window.location.href = "index.html";
+//         } else {
+//             console.log("Please fill in all fields");
+//         }
+//     });
+// }
+
+// document.querySelectorAll(".signup-submit").forEach((btn) => {
+//   btn.addEventListener("click", () => {
+//     const name = document.querySelector('.form-container.sign-up input[name="name"]').value;
+//     const email = document.querySelector('.form-container.sign-up input[name="email"]').value;
+//     const password = document.querySelector('.form-container.sign-up input[name="password"]').value;
+
+//     if (name && email && password) {
+//       localStorage.setItem("user", JSON.stringify({ name, email, password }));
+//       window.location.href = "index.html";
+//     } else {
+//       console.log("Please fill in all fields");
+//     }
+//   });
+// });
+
+
 
 // Handle Sign In
-if (signInButton) {
-    signInButton.addEventListener("click", () => {
-        const email = document.querySelector('.form-container.sign-in input[placeholder="Email"]').value;
-        const password = document.querySelector('.form-container.sign-in input[placeholder="Password"]').value;
+// if (signInButton) {
+//     signInButton.addEventListener("click", () => {
+//         const email = document.querySelector('.form-container.sign-in input[placeholder="Email"]').value;
+//         const password = document.querySelector('.form-container.sign-in input[placeholder="Password"]').value;
 
-        const userData = JSON.parse(localStorage.getItem("user"));
+//         const userData = JSON.parse(localStorage.getItem("user"));
 
-        if (userData && userData.email === email && userData.password === password) {
-            window.location.href = "index.html";
-        } else {
-            console.log("Invalid email or password");
-        }
-    });
-}
+//         if (userData && userData.email === email && userData.password === password) {
+//             window.location.href = "index.html";
+//         } else {
+//             console.log("Invalid email or password");
+//         }
+//     });
+// }
+
+// document.querySelectorAll(".signin-submit").forEach((btn) => {
+//   btn.addEventListener("click", () => {
+//     const email = document.querySelector('.form-container.sign-in input[name="email"]').value;
+//     const password = document.querySelector('.form-container.sign-in input[name="password"]').value;
+
+//     const userData = JSON.parse(localStorage.getItem("user"));
+
+//     if (userData && userData.email === email && userData.password === password) {
+//       window.location.href = "index.html";
+//     } else {
+//       console.log("Invalid email or password");
+//     }
+//   });
+// });
+
+
 
 // Check if user is logged in
 if (localStorage.getItem("user")) {
@@ -416,3 +460,17 @@ if (logoutBtn) {
 }
 
 // login register end
+
+
+
+
+
+
+
+
+
+
+
+
+let names = (...person) => `String [${person.join("],[")}] => Done !`;
+console.log(names("nour","nn"));
